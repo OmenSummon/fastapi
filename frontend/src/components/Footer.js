@@ -65,8 +65,6 @@ export default function Footer() {
           </div>
         </div>
         
-        {/* Bottom */}
-        </div>
               </div>
     </footer>
   );
