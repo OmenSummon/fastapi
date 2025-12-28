@@ -3,3 +3,4 @@
   "outputDirectory": "frontend/build",
   "framework": "react"
 }
+  // Updated for Vercel deployment
