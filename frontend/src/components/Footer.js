@@ -66,15 +66,6 @@ export default function Footer() {
         </div>
         
         {/* Bottom */}
-        <div className="mt-8 pt-8 border-t text-center">
-          <p className="text-sm text-muted-foreground">
-            Made with <Heart className="w-4 h-4 inline text-red-500 fill-current" /> by S² Creation - Whispering Hands
-          </p>
-          <p className="text-xs text-muted-foreground mt-2">
-            © {new Date().getFullYear()} S² Creation. All rights reserved.
-          </p>
-        </div>
-      </div>
     </footer>
   );
 }
