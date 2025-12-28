@@ -1,0 +1,149 @@
+{
+  "project_name": "S² Creation – Crochet & Cards",
+  "design_philosophy": {
+    "theme": "Cozy Workshop",
+    "emotional_tone": "Warm, Tactile, Intimate, Playful, Authentic",
+    "core_concept": "Handmade with Love. Won with Luck.",
+    "visual_style": "Soft textures, organic shapes, warm neutrals, generous whitespace"
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Playfair Display, serif",
+      "body": "Nunito, sans-serif",
+      "accent": "Caveat, cursive"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-6xl font-bold tracking-tight",
+      "h2": "text-4xl md:text-5xl font-semibold",
+      "h3": "text-2xl md:text-3xl font-medium",
+      "body": "text-base md:text-lg leading-relaxed",
+      "caption": "text-sm text-muted-foreground tracking-wide"
+    },
+    "usage_rules": "Use Playfair Display for all section titles and hero text. Use Nunito for product descriptions and UI elements. Use Caveat for 'handwritten' notes, prices, or 'Made by' tags."
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "DEFAULT": "#8DA399",
+        "foreground": "#FFFFFF",
+        "description": "Sage Green - Calming, natural, represents the 'Handmade' aspect"
+      },
+      "secondary": {
+        "DEFAULT": "#C78D75",
+        "foreground": "#FFFFFF",
+        "description": "Warm Terracotta/Clay - Earthy, adds warmth"
+      },
+      "accent": {
+        "DEFAULT": "#E3C565",
+        "foreground": "#3E3E3E",
+        "description": "Soft Gold/Mustard - For 'Luck', 'Win', and highlights"
+      },
+      "background": {
+        "DEFAULT": "#F9F7F2",
+        "paper": "#FFFFFF",
+        "subtle": "#F0EFEA"
+      },
+      "text": {
+        "DEFAULT": "#4A4A4A",
+        "muted": "#8C8C8C",
+        "heading": "#2D2D2D"
+      }
+    },
+    "gradients": {
+      "hero": "linear-gradient(135deg, #F9F7F2 0%, #F0EFEA 100%)",
+      "game_wheel": "conic-gradient(#8DA399, #C78D75, #E3C565, #8DA399)",
+      "overlay": "linear-gradient(to bottom, rgba(249, 247, 242, 0), rgba(249, 247, 242, 1))"
+    }
+  },
+  "visual_enhancers": {
+    "radius": {
+      "default": "rounded-xl",
+      "button": "rounded-full",
+      "card": "rounded-2xl"
+    },
+    "shadows": {
+      "soft": "0 4px 20px -2px rgba(141, 163, 153, 0.15)",
+      "lifted": "0 10px 30px -5px rgba(141, 163, 153, 0.2)",
+      "inner": "inset 0 2px 4px 0 rgba(0, 0, 0, 0.05)"
+    },
+    "textures": {
+      "paper": "url('https://www.transparenttextures.com/patterns/cream-paper.png')",
+      "noise": "url('data:image/svg+xml;base64,...')" 
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-3 font-semibold shadow-soft transition-all hover:-translate-y-0.5",
+      "secondary": "bg-white border-2 border-primary/20 text-primary hover:bg-primary/5 rounded-full px-8 py-3 font-medium transition-all",
+      "ghost": "hover:bg-accent/10 text-accent-foreground rounded-lg px-4 py-2"
+    },
+    "cards": {
+      "product": "bg-white rounded-2xl overflow-hidden border border-border/40 shadow-sm hover:shadow-lifted transition-all duration-300 group",
+      "feature": "bg-background-subtle p-8 rounded-3xl border border-white/50"
+    },
+    "inputs": {
+      "default": "bg-white border-border/60 focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-lg h-12 px-4"
+    }
+  },
+  "layout_strategies": {
+    "grid_system": "Use a 'Masonry' or 'Bento' style grid for products. Avoid rigid uniform grids. Mix tall (crochet dolls) and wide (cards) items.",
+    "spacing": "Generous padding. Section spacing: py-20 or py-24. Element spacing: gap-6 or gap-8.",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+  },
+  "motion": {
+    "hover": "transition-all duration-300 ease-out",
+    "entrance": "animate-in fade-in slide-in-from-bottom-4 duration-700",
+    "micro_interactions": "Active scale-95 on buttons. Subtle rotation on product hover."
+  },
+  "image_urls": {
+    "hero": [
+      "https://images.unsplash.com/photo-1728393287642-13bee7126ae8?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1617897210309-61331a57ac1f?crop=entropy&cs=srgb&fm=jpg&q=85"
+    ],
+    "products": {
+      "crochet": [
+        "https://images.unsplash.com/photo-1757583012114-0a48ae0a6e3c?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1603321581635-d46915755425?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ],
+      "cards": [
+        "https://images.unsplash.com/photo-1758402750917-52aead675b72?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1764385827204-95e931324847?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    },
+    "textures": [
+      "https://images.unsplash.com/photo-1671624760774-b2777e7742d2?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1671624756418-22126da50dc3?crop=entropy&cs=srgb&fm=jpg&q=85"
+    ],
+    "logo": "https://customer-assets.emergentagent.com/job_crochet-lucky/artifacts/lpdgvd71_1cd9b656-4f95-4983-9ee1-eac9a8b25537.jpg"
+  },
+  "instructions_to_main_agent": [
+    "Implement the 'Spin the Wheel' game using a library like 'react-roulette-pro' or custom SVG/Framer Motion. It must feel 'heavy' and 'real'.",
+    "Use the provided logo in the header. It has a festive/crochet theme, so ensure the header background complements it (likely white or very pale cream).",
+    "For the 'Story' section on product pages, use a layout that looks like a journal entry or a scrapbook page.",
+    "Ensure the 'My Rewards' wallet feels valuable—use gold/accent colors for the points/coupons.",
+    "Use 'lucide-react' for icons. Pick rounded, friendly icons.",
+    "Install 'framer-motion' for all animations.",
+    "Install 'clsx' and 'tailwind-merge' for class management."
+  ],
+  "universal_guidelines": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN",
+    "Prioritize using pre-existing components from src/components/ui when applicable",
+    "Create new components that match the style and conventions of existing components when needed",
+    "Examine existing components to understand the project's component patterns before creating new ones",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use 'sonner' for toasts. Sonner component are located in /app/src/components/ui/sonner.tsx",
+    "All interactive and key informational elements MUST include a data-testid attribute to facilitate robust automated testing."
+  ]
+}
