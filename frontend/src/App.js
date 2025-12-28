@@ -1,51 +1,69 @@
-import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Toaster } from "@/components/ui/sonner";
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+// Pages
+import Landing from "@/pages/Landing";
+import Login from "@/pages/Login";
+import AuthCallback from "@/pages/AuthCallback";
+import Products from "@/pages/Products";
+import ProductDetail from "@/pages/ProductDetail";
+import Game from "@/pages/Game";
+import Rewards from "@/pages/Rewards";
+import Cart from "@/pages/Cart";
+import About from "@/pages/About";
+import Admin from "@/pages/Admin";
+import ProtectedRoute from "@/components/ProtectedRoute";
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
+function AppRouter() {
+  const location = useLocation();
+  
+  // Check URL fragment for session_id (synchronous during render)
+  if (location.hash?.includes('session_id=')) {
+    return <AuthCallback />;
+  }
+  
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/products" element={<Products />} />
+      <Route path="/products/:productId" element={<ProductDetail />} />
+      <Route path="/about" element={<About />} />
+      
+      {/* Protected Routes */}
+      <Route path="/game" element={
+        <ProtectedRoute>
+          <Game />
+        </ProtectedRoute>
+      } />
+      <Route path="/rewards" element={
+        <ProtectedRoute>
+          <Rewards />
+        </ProtectedRoute>
+      } />
+      <Route path="/cart" element={
+        <ProtectedRoute>
+          <Cart />
+        </ProtectedRoute>
+      } />
+      <Route path="/admin" element={
+        <ProtectedRoute>
+          <Admin />
+        </ProtectedRoute>
+      } />
+      
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
-};
+}
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
+        <AppRouter />
+        <Toaster position="top-center" richColors />
       </BrowserRouter>
     </div>
   );
